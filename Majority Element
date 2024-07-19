@@ -1,0 +1,15 @@
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        s={}
+        se=set(nums)
+        sc=list(se)
+        for i in sc:
+            a=nums.count(i)
+            s[i]=a
+        maxi=max(s.values())
+        for key,value in s.items():
+            if maxi==value:
+                return key
+            
+        
+        
